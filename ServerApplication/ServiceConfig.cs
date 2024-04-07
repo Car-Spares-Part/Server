@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using ServerApplication.Services;
 using SW.CqApi;
 using SW.CqApi.AuthOptions;
 
@@ -38,6 +39,10 @@ public static class ServiceConfig
                 configureOptions.SaveToken = true;
                 configureOptions.TokenValidationParameters = new TokenValidationParameters()
                 {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
                     ValidIssuer = configuration["Token:Issuer"],
                     ValidAudience = configuration["Token:Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Token:Key"]))
@@ -54,6 +59,7 @@ public static class ServiceConfig
                     builder.AllowAnyMethod();
                 });
         });
-        
+        services.AddScoped<ICreateJWT, CreateJwt>();
+
     }
 }

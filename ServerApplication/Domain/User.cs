@@ -21,7 +21,7 @@ public class User : IEntity
         PhoneNumber = phoneNumber;
         PasswordHash = CreatePasswordHash(password);
         CreatedOn = DateTime.Now;
-        UserRole = role == "customer" ? Role.Customer : Role.Store;
+        UserRole = role.ToLower() == "customer" ? Role.Customer : Role.Store;
     }
 
     public Guid Id { get; set; }
@@ -36,6 +36,16 @@ public class User : IEntity
     public DateTime CreatedOn { get; set; }
 
     public DateTime UpdatedOn { get; set; }
+
+    public bool CheckValidPassword(string userPassword, string enteredPassword)
+    {
+        if (userPassword == CreatePasswordHash(enteredPassword))
+        {
+            return true;
+        }
+
+        return false;
+    }
 
     // Hashed Password 
     private string CreatePasswordHash(string password)
