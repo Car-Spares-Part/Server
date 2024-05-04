@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Server\\ServerApplication\\ServerApplication.csproj": {}
+    "/Users/abushiyyab/Desktop/MyProject/Server/ServerApplication/ServerApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Server\\ServerApplication\\ServerApplication.csproj": {
+    "/Users/abushiyyab/Desktop/MyProject/Server/ServerApplication/ServerApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Server\\ServerApplication\\ServerApplication.csproj",
+        "projectUniqueName": "/Users/abushiyyab/Desktop/MyProject/Server/ServerApplication/ServerApplication.csproj",
         "projectName": "ServerApplication",
-        "projectPath": "C:\\Users\\LENOVO\\Server\\ServerApplication\\ServerApplication.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Server\\ServerApplication\\obj\\",
+        "projectPath": "/Users/abushiyyab/Desktop/MyProject/Server/ServerApplication/ServerApplication.csproj",
+        "packagesPath": "/Users/abushiyyab/.nuget/packages/",
+        "outputPath": "/Users/abushiyyab/Desktop/MyProject/Server/ServerApplication/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/abushiyyab/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -104,7 +109,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

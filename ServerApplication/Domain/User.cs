@@ -64,14 +64,14 @@ public class CustomerAddress : IEntity
     public CustomerAddress() {
     }
 
-    public CustomerAddress(Guid userId, Guid storeId, string country, string city, string? area, string addressLine1, string? addressLine2, decimal? lng, decimal? lat, bool isRequestedByUser)
+    public CustomerAddress(Guid id, string country, string city, string? area, string addressLine1, string? addressLine2, decimal? lng, decimal? lat, bool isRequestedByUser)
     {
         if (isRequestedByUser)
         {
-            UserId = userId;
+            UserId = id;
         } else
         {
-            StoreId = storeId;
+            StoreId = id;
         }
         Country = country;
         City = city;
@@ -98,6 +98,7 @@ public class CustomerAddress : IEntity
 
     // Navigation property (USER)
     public User User { get; set; }
+    public Stores Store { get; set; }
     public DateTime CreatedOn { get; set; }
     public DateTime UpdatedOn { get; set; }
 }

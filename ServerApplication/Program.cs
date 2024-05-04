@@ -37,7 +37,7 @@ using (var scope = app.Services.CreateScope())
     }
     finally
     {
-        ((IDisposable) requiredService)?.Dispose();
+        ((IDisposable)requiredService)?.Dispose();
     }
 }
 
@@ -55,9 +55,6 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "docs";
 });
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
+app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 
 app.Run();

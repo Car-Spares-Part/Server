@@ -81,6 +81,7 @@ namespace ServerApplication.Migrations
                         .HasName("pk_customer_address");
 
                     b.HasIndex("StoreId")
+                        .IsUnique()
                         .HasDatabaseName("ix_customer_address_store_id");
 
                     b.HasIndex("UserId")
@@ -252,6 +253,10 @@ namespace ServerApplication.Migrations
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_on");
 
+                    b.Property<bool>("isAccepted")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_accepted");
+
                     b.Property<int>("rate")
                         .HasColumnType("integer")
                         .HasColumnName("rate");
@@ -319,9 +324,11 @@ namespace ServerApplication.Migrations
 
             modelBuilder.Entity("ServerApplication.Domain.CustomerAddress", b =>
                 {
-                    b.HasOne("ServerApplication.Domain.Stores", null)
-                        .WithMany("CustomerAddresses")
-                        .HasForeignKey("StoreId")
+                    b.HasOne("ServerApplication.Domain.Stores", "Store")
+                        .WithOne("CustomerAddresses")
+                        .HasForeignKey("ServerApplication.Domain.CustomerAddress", "StoreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
                         .HasConstraintName("fk_customer_address_stores_store_id");
 
                     b.HasOne("ServerApplication.Domain.User", "User")
@@ -331,12 +338,15 @@ namespace ServerApplication.Migrations
                         .IsRequired()
                         .HasConstraintName("fk_customer_address_user_user_id");
 
+                    b.Navigation("Store");
+
                     b.Navigation("User");
                 });
 
             modelBuilder.Entity("ServerApplication.Domain.Stores", b =>
                 {
-                    b.Navigation("CustomerAddresses");
+                    b.Navigation("CustomerAddresses")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ServerApplication.Domain.User", b =>

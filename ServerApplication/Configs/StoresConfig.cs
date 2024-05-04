@@ -9,7 +9,6 @@ namespace ServerApplication.Configs
         public void Configure(EntityTypeBuilder<Stores> builder)
         {
             builder.HasKey(s => s.Id);
-
             builder.Property(s => s.Name)
                 .IsRequired()
                 .HasMaxLength(200);
@@ -24,11 +23,9 @@ namespace ServerApplication.Configs
 
             builder.Property(s => s.UpdatedOn)
                 .IsRequired();
-            
-            builder.HasMany(s => s.CustomerAddresses)
-                .WithOne()
-                .HasForeignKey(ca => ca.StoreId)
-                .IsRequired(false);
+            builder.HasOne(s => s.CustomerAddresses)
+                .WithOne(ca => ca.Store)
+                .HasForeignKey<CustomerAddress>(ca => ca.StoreId);
         }
     }
 }

@@ -22,6 +22,7 @@ namespace ServerApplication.Services
             // 2. Create a list of claims for user
             var claims = new[] {
                 new Claim("userName", $"{userModel.FirstName} {userModel.MiddleName} {userModel.LastName}"),
+                new Claim("userId", $"{userModel.Id}"),
                 new Claim("phoneNumber", userModel.PhoneNumber),
                 new Claim("email", userModel.Email),
                 new Claim("role", userModel.UserRole.ToString())};
