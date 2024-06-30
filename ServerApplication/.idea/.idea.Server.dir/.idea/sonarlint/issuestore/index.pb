@@ -1,0 +1,39 @@
+
+F
+Resources/Store/Get.cs,7/3/736c4554967dec5bacc7c40befe1157174d52bb6
+>
+Domain/User.cs,9/e/9e644e03328f9c3d63d3166bacce3b08050c2bfd
+I
+Resources/Store/Create.cs,d/c/dce2a800b86d42f53d1d9c4c6bfed67b8d570aa6
+O
+Resources/Store/ApproveStore.cs,c/3/c3e1cda7e73cdaa8cfa846bc19ceacc4340ac909
+I
+Resources/Store/Search.cs,4/a/4a87e8d057f3d6028dcf5471904cb54f88f24479
+A
+Domain/IEntity.cs,5/5/554d8a9b5d74499f1483862022e94a16a5e56eff
+@
+Domain/Orders.cs,9/6/96f63df975163078024095627a103a0635ef54b8
+N
+Repository/OrdersRepository.cs,e/8/e815b2230e382811c2e379656d1d1b3898147b68
+E
+Services/CreateJwt.cs,3/a/3a82641586e0bd406538c5ae9c2ea2e8178c4b91
+@
+ServiceConfig.cs,a/7/a7ef8c4b644e9f12beadfd2fef2b55934a5bf030
+O
+Resources/Customers/Register.cs,a/4/a45f34b1ba237e50c35c5426d03a6406614fc049
+G
+Resources/Orders/Get.cs,7/8/7881722bb915b6da76f3d6b3558fc763bdf0f2a0
+J
+Resources/Orders/Create.cs,a/2/a2bac1e5bfdcfee43a85d2769f87068c501a4b0d
+J
+Resources/Orders/Search.cs,d/9/d91b1d254d8f0a46100ee630fa3e069b9af2a95c
+J
+Resources/Orders/Delete.cs,8/7/87f6f84f9c86663f897ec3554903c29d7c265fa5
+K
+Resources/Orders/GetById.cs,1/9/19dbf5723b607bb08807b96f0e68a687c3f4ad47
+O
+Resources/Orders/GetByStatus.cs,a/c/ac4559c7301b33575e363d9aee27f87c765f8646
+L
+Resources/Customers/Login.cs,d/d/dd020e2e18193c1f41868e46bc6dcbcde9843e5b
+J
+Resources/Orders/Update.cs,3/4/3418eb180bfa9bc57b9b3852ea4b1376c03dd18c

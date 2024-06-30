@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using ServerApplication.Repository;
 using ServerApplication.Services;
 using SW.CqApi;
 using SW.CqApi.AuthOptions;
@@ -60,6 +61,7 @@ public static class ServiceConfig
                 });
         });
         services.AddScoped<ICreateJWT, CreateJwt>();
+        services.AddScoped<IOrdersRepository, OrdersRepository>();
 
     }
 }
